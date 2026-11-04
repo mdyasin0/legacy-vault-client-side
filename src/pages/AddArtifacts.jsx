@@ -86,7 +86,7 @@ const handleImageUpload = async (e) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("https://artifacts-chi-lovat.vercel.app/addartifacts", {
+    fetch("https://artifacts-server-side.onrender.com/addartifacts", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

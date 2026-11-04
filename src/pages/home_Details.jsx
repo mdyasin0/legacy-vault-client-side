@@ -13,7 +13,7 @@ const Home_Details = () => {
   const [likeCount, setLikeCount] = useState(0);
 
   useEffect(() => {
-    fetch(`https://artifacts-chi-lovat.vercel.app/artifacts/${id}`, {
+    fetch(`https://artifacts-server-side.onrender.com/artifacts/${id}`, {
     credentials: "include",
   })
       .then((res) => res.json())
@@ -31,7 +31,7 @@ const Home_Details = () => {
     }
 
     fetch(
-      `https://artifacts-chi-lovat.vercel.app/artifacts/like/${artifact._id}`,
+      `https://artifacts-server-side.onrender.com/artifacts/like/${artifact._id}`,
       {
         method: "PATCH",
         headers: {

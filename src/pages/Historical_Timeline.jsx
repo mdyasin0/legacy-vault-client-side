@@ -5,7 +5,7 @@ const HistoricalTimeline = () => {
   const [showAll, setShowAll] = useState(false);
 
   useEffect(() => {
-    fetch("https://artifacts-chi-lovat.vercel.app/historical_timeline")
+    fetch("https://artifacts-server-side.onrender.com/historical_timeline")
       .then((res) => res.json())
       .then((data) => setTimeline(data));
   }, []);

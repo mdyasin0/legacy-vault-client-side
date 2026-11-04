@@ -20,7 +20,7 @@ const ArtifactCard = () => {
   }, []);
 
   useEffect(() => {
-    fetch("https://artifacts-chi-lovat.vercel.app/artifacts")
+    fetch("https://artifacts-server-side.onrender.com/artifacts")
       .then((res) => res.json())
       .then((data) => {
         setArtifact(data);

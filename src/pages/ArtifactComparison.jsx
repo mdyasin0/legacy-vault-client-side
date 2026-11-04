@@ -20,7 +20,7 @@ const ArtifactComparison = () => {
 
   //  Fetch all artifacts
   useEffect(() => {
-    fetch("https://artifacts-chi-lovat.vercel.app/artifacts")
+    fetch("https://artifacts-server-side.onrender.com/artifacts")
       .then((res) => res.json())
       .then((data) => setArtifacts(data))
       .catch(() => toast.error("Failed to load artifacts!"));
@@ -29,12 +29,12 @@ const ArtifactComparison = () => {
   //  Fetch selected artifacts
   useEffect(() => {
     if (artifact1Id) {
-      fetch(`https://artifacts-chi-lovat.vercel.app/artifacts/${artifact1Id}`)
+      fetch(`https://artifacts-server-side.onrender.com/artifacts/${artifact1Id}`)
         .then((res) => res.json())
         .then((data) => setArtifact1(data));
     }
     if (artifact2Id) {
-      fetch(`https://artifacts-chi-lovat.vercel.app/artifacts/${artifact2Id}`)
+      fetch(`https://artifacts-server-side.onrender.com/artifacts/${artifact2Id}`)
         .then((res) => res.json())
         .then((data) => setArtifact2(data));
     }
@@ -43,7 +43,7 @@ const ArtifactComparison = () => {
   //  Fetch Notes
   useEffect(() => {
     if (user?.email) {
-      fetch("https://artifacts-chi-lovat.vercel.app/notes", { credentials: "include" })
+      fetch("https://artifacts-server-side.onrender.com/notes", { credentials: "include" })
         .then((res) => res.json())
         .then((data) => setNotes(data))
         .catch(() => toast.error("Failed to load notes!"));
@@ -57,7 +57,7 @@ const ArtifactComparison = () => {
 
     const newNote = { email: user.email, title: noteTitle, content: noteContent };
 
-    const res = await fetch("https://artifacts-chi-lovat.vercel.app/notes", {
+    const res = await fetch("https://artifacts-server-side.onrender.com/notes", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       credentials: "include",
@@ -68,7 +68,7 @@ const ArtifactComparison = () => {
       toast.success("Note saved!");
       setNoteTitle("");
       setNoteContent("");
-      const updatedNotes = await fetch("https://artifacts-chi-lovat.vercel.app/notes", {
+      const updatedNotes = await fetch("https://artifacts-server-side.onrender.com/notes", {
         credentials: "include",
       }).then((res) => res.json());
       setNotes(updatedNotes);
@@ -77,7 +77,7 @@ const ArtifactComparison = () => {
 
   //  Delete Note
   const handleDeleteNote = async (id) => {
-    const res = await fetch(`https://artifacts-chi-lovat.vercel.app/notes/${id}`, {
+    const res = await fetch(`https://artifacts-server-side.onrender.com/notes/${id}`, {
       method: "DELETE",
       credentials: "include",
     });
@@ -91,7 +91,7 @@ const ArtifactComparison = () => {
   //  Update Note
   const handleUpdateNote = async () => {
     if (!selectedNote) return;
-    const res = await fetch(`https://artifacts-chi-lovat.vercel.app/notes/${selectedNote._id}`, {
+    const res = await fetch(`https://artifacts-server-side.onrender.com/notes/${selectedNote._id}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       credentials: "include",
@@ -104,7 +104,7 @@ const ArtifactComparison = () => {
     if (res.ok) {
       toast.success("Note updated!");
       setSelectedNote(null);
-      const updated = await fetch("https://artifacts-chi-lovat.vercel.app/notes", {
+      const updated = await fetch("https://artifacts-server-side.onrender.com/notes", {
         credentials: "include",
       }).then((res) => res.json());
       setNotes(updated);

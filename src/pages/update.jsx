@@ -50,7 +50,7 @@ const Update = () => {
   });
 
   useEffect(() => {
-    fetch(`https://artifacts-chi-lovat.vercel.app/update/${id}`, {
+    fetch(`https://artifacts-server-side.onrender.com/update/${id}`, {
       credentials: "include",
     })
       .then((res) => res.json())
@@ -91,7 +91,7 @@ const Update = () => {
     e.preventDefault();
 
     const res = await fetch(
-      `https://artifacts-chi-lovat.vercel.app/update/${id}`,
+      `https://artifacts-server-side.onrender.com/update/${id}`,
       {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },

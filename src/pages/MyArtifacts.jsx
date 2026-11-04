@@ -26,7 +26,7 @@ const MyArtifacts = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://artifacts-chi-lovat.vercel.app/delete/${id}`, {
+        fetch(`https://artifacts-server-side.onrender.com/delete/${id}`, {
           method: "DELETE",
           credentials: "include",
         })
@@ -52,7 +52,7 @@ const MyArtifacts = () => {
   };
 
   useEffect(() => {
-    fetch("https://artifacts-chi-lovat.vercel.app/artifacts")
+    fetch("https://artifacts-server-side.onrender.com/artifacts")
       .then((res) => res.json())
       .then((data) => {
         if (user?.email) {

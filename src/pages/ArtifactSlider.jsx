@@ -6,7 +6,7 @@ const ArtifactSlider = () => {
 
   useEffect(() => {
     axios
-      .get("https://artifacts-chi-lovat.vercel.app/artifacts")
+      .get("https://artifacts-server-side.onrender.com/artifacts")
       .then((res) => setArtifacts(res.data))
       .catch((err) => console.error(err));
   }, []);
