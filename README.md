@@ -1,4 +1,4 @@
-# 🏺 Legacy Vault
+# 🏺 Legacy Vault-client
 
 A modern, interactive web application for discovering, exploring, comparing, and preserving information about historical artifacts.
 
