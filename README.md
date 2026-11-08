@@ -1,4 +1,4 @@
-# 🏺 Historical Artifacts Tracker
+# 🏺 Legacy Vault
 
 A modern, interactive web application for discovering, exploring, comparing, and preserving information about historical artifacts.
 
@@ -140,7 +140,7 @@ Make sure you have installed:
 **1. Clone the repository**
 
 ```bash
-git clone YOUR_CLIENT_REPOSITORY_URL
+git clone https://github.com/mdyasin0/artifacs-client-side.git
 ```
 
 **2. Navigate to the project directory**
@@ -162,15 +162,16 @@ Create a `.env` file in the root directory and configure the required environmen
 Example:
 
 ```env
-VITE_apiKey=your_firebase_api_key
-VITE_authDomain=your_firebase_auth_domain
-VITE_projectId=your_firebase_project_id
-VITE_storageBucket=your_firebase_storage_bucket
-VITE_messagingSenderId=your_firebase_messaging_sender_id
-VITE_appId=your_firebase_app_id
+  VITE_apiKey= 
+  VITE_authDomain= 
+  VITE_projectId=
+  VITE_storageBucket=
+  VITE_messagingSenderId= 
+  VITE_appId =
+
+  
 ```
 
-Use the actual environment variable names referenced in your project source code.
 
 Never commit private credentials or sensitive configuration files to a public repository.
 
