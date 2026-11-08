@@ -140,7 +140,7 @@ Make sure you have installed:
 **1. Clone the repository**
 
 ```bash
-git clone https://github.com/mdyasin0/artifacs-client-side.git
+git clone https://github.com/mdyasin0/legacy-vault-client-side.git
 ```
 
 **2. Navigate to the project directory**
