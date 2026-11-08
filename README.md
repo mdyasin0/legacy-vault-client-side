@@ -6,7 +6,7 @@ Historical Artifacts Tracker provides a centralized platform where users can exp
 
 ## 🌐 Live Application
 
-**Live Website:** https://assignment-11-1588b.web.app/
+**Live Website:** https://assignment-11-1588b.web.app
 
 ---
 
